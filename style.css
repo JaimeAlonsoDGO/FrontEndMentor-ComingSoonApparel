@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+    --linear-one-color-one:hsl(0, 36%, 85%);
+    --linear-one-color-two:hsl(0, 64%, 87%);
+    --linear-two-color-one: hsl(0, 80%, 86%);
+    --linear-two-color-two: hsl(0, 74%, 74%); 
+    --arrow-icon: url(images/icon-arrow.svg);
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    height: 800px;
+    max-width: 1440px;
+    margin: auto;
+    padding-left: 11em;
+    background-image: url(images/bg-pattern-desktop.svg);
+}
+.logo-container{
+    display: inline-block;
+    height: 150px;
+    width: 200px;
+    padding-top: 4em;
+}
+
+.hero{
+    height: 800px;
+    width: 47%;
+    float: right;
+    background-image: url('images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+}
+
+.main{
+    width: 35%;
+    height: 550px;
+    padding-top: 5em;
+}
+
+.coming-soon-one,
+.coming-soon-two{
+    font-size: 3.8em;
+    letter-spacing: .8rem;
+}
+
+.coming-soon-one{
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+.coming-soon-two{
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.presentation{
+    color: var(--desaturated-red);
+    line-height: 1.8em;
+    margin-bottom: 2.9em;
+}
+
+.email-address{
+    border: 1px solid var(--desaturated-red);
+    border-radius: 30px;
+    height: 3.3rem;
+    width: 100%;
+    font-size: .9em;
+    margin-bottom: 1em;
+}
+
+.email-address::placeholder{
+    color: var(--desaturated-red);
+}
+.input-email-container{
+    height: 3.3em;
+    width: 85%;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.errorIcon{
+    position: absolute;
+    right: 3.5em;
+    top: 1em;
+    display: none;
+}
+
+.button-email{
+    position: absolute;
+    height: 3.3em;
+    width: 5.9em;
+    background-image: var(--arrow-icon), linear-gradient(135deg, var(--linear-two-color-one), var(--linear-two-color-two));
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2.5em;
+    right: -2.8em;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.button-email:hover{
+    background-image: var(--arrow-icon), linear-gradient(135deg, var(--linear-one-color-one), var(--linear-one-color-two));;
+}
+
+.warning-box,
+.email-address{
+    color: var(--soft-red);
+    padding-left: 2em;
+}
+
+@media screen and (max-width: 1200px)
+{
+    html{
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        width: 375px;
+        height: 800px;
+        max-width: 375px;
+        padding-left: 0;
+        margin: auto;
+        background: white;
+    }
+    .header{
+        width: 375px;
+    }
+    .logo-container{
+        display: block;
+        width: 100%;
+        height: 85px;
+        padding: 2em 0 0 2em;
+    }
+
+    .logo-img{
+        width: 6em;
+    }
+
+    .hero{
+        display: block;
+        height: 250px;
+        width: 100%;
+        background-image: url('images/hero-mobile.jpg');
+        background-size: cover;
+        margin-bottom: 4em;
+    }
+
+    .main{
+        width: 100%;
+        display: block;
+        height: 465px;
+    }
+
+    .details-information{
+        width: 310px;
+        margin: auto;
+    }
+
+    .coming-soon-one,
+    .coming-soon-two{
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .coming-soon-two{
+        margin-bottom: .8em;
+    }
+
+    .presentation{
+        text-align: center;
+        font-size: .9em;
+    }
+
+}
